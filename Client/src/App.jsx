@@ -168,15 +168,15 @@ function AppContent({ onLogout }) {
     },
   ];
   return (
-    <div className='min-h-screen w-[100vw] flex bg-gray-50'>
-      <div className='hidden md:block buttons'>
+    <div className='min-h-screen flex bg-gray-50'>
+      <div className='hidden md:block'>
         <Sidbar onLogout={onLogout} />
       </div>
 
       <div className='flex-1 flex flex-col w-full'>
         {/* Header */}
         <header className='bg-white shadow-sm sticky top-0 z-10'>
-          <div className='w-[100vw] mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='w-full mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='flex justify-between h-16 items-center'>
               <div className='md:hidden flex items-center'>
                 <button
@@ -332,7 +332,7 @@ function AppContent({ onLogout }) {
         </header>
 
         {/* Main Content Area with Fixed Width and Scroll */}
-        <main className='flex-1 w-[100vw] py-6 px-2 sm:px-4 overflow-hidden md:ml-[10vw]'>
+        <main className='flex-1 py-6 px-2 sm:px-4 overflow-hidden'>
           <div className='w-full max-w-6xl mx-auto h-full overflow-auto px-4 py-4 bg-white rounded-lg shadow'>
             <Routes>
               <Route path='/login' element={<Login />} />

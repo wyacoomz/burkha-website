@@ -185,7 +185,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import ChartComponent from '../pages/ChartCompoenent'
+import ChartComponent from '../pages/ChartCompoenent';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 const Dashboard = () => {
   const [todaysTotal, setTodaysTotal] = useState({ count: 0, price: 0 });
@@ -311,7 +312,7 @@ const Dashboard = () => {
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <p>Loading...</p>
+        <LoadingSpinner />
       </div>
     );
   }

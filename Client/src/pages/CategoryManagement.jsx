@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Plus, Edit, Trash2, Save, X, FolderTree } from "lucide-react"
 import { addCategory, deleteCategory, fetchcategory, updateCategory } from "../api"
+import LoadingSpinner from "../components/LoadingSpinner"
 
 const CategoryManagement = () => {
   // const [categories, setCategories] = useState([])
@@ -121,7 +122,7 @@ const [categories, setCategories] = useState([]);
           <h3 className="text-lg font-medium mb-3">Categories</h3>
 
           {loading ? (
-            <div className="text-center py-4 text-black">Loading categories...</div>
+            <div className="text-center py-4 text-black"><LoadingSpinner /></div>
           ) : categories.length === 0 ? (
             <div className="text-center py-4 text-gray-500">No categories found.</div>
           ) : (

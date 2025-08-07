@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import DataTable from "react-data-table-component";
 import { useNavigate, useLocation } from "react-router-dom";
+import LoadingSpinner from "../components/LoadingSpinner";
 import { useReactToPrint } from "react-to-print";
 import { debounce } from "lodash";
 import { jsPDF } from "jspdf";
@@ -445,6 +446,7 @@ const Orders = () => {
           columns={columns}
           data={state.filteredOrders}
           progressPending={state.loading}
+          progressComponent={<LoadingSpinner />}
           pagination
           paginationPerPage={10}
           paginationRowsPerPageOptions={[10, 25, 50, 100]}

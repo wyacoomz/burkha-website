@@ -22,6 +22,7 @@ import axios from "axios";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import toast from "react-hot-toast";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -634,8 +635,7 @@ const ProductList = () => {
 
       {loading ? (
         <div className='flex justify-center items-center p-8'>
-          <RefreshCw size={24} className='animate-spin text-primary-600' />
-          <span className='ml-2 text-gray-600'>Loading products...</span>
+          <LoadingSpinner />
         </div>
       ) : error ? (
         <div className='p-8 text-center text-red-600'>{error}</div>

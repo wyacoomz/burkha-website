@@ -422,12 +422,12 @@ const Sidebar = () => {
 
       {/* Sidebar */}
       <aside
-        className={`bg-white text-black shadow-lg border-r z-50 transition-transform duration-300 ease-in-out ${
+        className={`bg-white text-black shadow-lg border-r z-50 transition-transform duration-300 ease-in-out w-64 h-screen ${
           isMobile
             ? `fixed top-0 left-0 h-full w-64 transform ${
                 isOpen ? "translate-x-0" : "-translate-x-full"
               }`
-            : "hidden md:block md:fixed md:top-16 md:left-0 md:w-64 md:h-[calc(100%-4rem)]"
+            : " "
         } overflow-y-auto`}
       >
         <div className="p-4 h-full flex flex-col">
