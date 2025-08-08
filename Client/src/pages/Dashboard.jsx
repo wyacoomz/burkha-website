@@ -348,7 +348,7 @@ const Dashboard = () => {
 
         <div className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-800">Orders Trend (Last 7 Days)</h2>
-          <div className="w-full min-h-[300px]">
+          <div className="w-full h-72">
             <ChartComponent
               historicalData={historicalData}
               todaysTotal={todaysTotal}
